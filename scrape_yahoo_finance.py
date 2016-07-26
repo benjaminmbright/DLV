@@ -35,8 +35,8 @@ PARAMETERS = {
     'last trade time': 't1',
     'after hours change': 'c8',
     'commission': 'c3',
-    'day’s low': 'g',
-    'day’s high': 'h',
+    'day\'s low': 'g',
+    'day\'s high': 'h',
     'last trade (realtime) with time': 'k1',
     'last trade (with time)': 'l',
     'last trade (price only)': 'l1',
@@ -47,11 +47,11 @@ PARAMETERS = {
     'percent change from 50 day moving average': 'm8',
     '50 day moving average': 'm3',
     '200 day moving average': 'm4',
-    'day’s value change': 'w1',
-    'day’s value change (realtime)': 'w4',
+    'day\'s value change': 'w1',
+    'day\'s value change (realtime)': 'w4',
     'price paid': 'p1',
-    'day’s range': 'm',
-    'day’s range (realtime)': 'm2',
+    'day\'s range': 'm',
+    'day\'s range (realtime)': 'm2',
     'holding gain percent': 'g1',
     'annualized gain': 'g3',
     'holdings gain': 'g4',
@@ -113,7 +113,10 @@ PARAMETERS = {
 # ----------------------------------------------------------------------------
 url = 'http://finance.yahoo.com/d/quotes.csv'
 symbols = ['CRUS', 'AAPL']
-parameters = ['symbol', 'ask', 'bid', 'open', 'eps estimate next year']
+parameters = [
+    'symbol', 'previous close',
+    'open', 'day\'s range', 'last trade (price only)',
+    '52 week range', '1 yr target price']
 request = (                                                                     # build url request
     url +                                                                       # base url
     '?' +                                                                       # query symbol
